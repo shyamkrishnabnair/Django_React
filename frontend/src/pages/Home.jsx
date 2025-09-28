@@ -49,12 +49,7 @@ function Home() {
     return (
         <div>
             <div>
-                <h2>Notes</h2>
-                {notes.map((note) => (
-                    <Note note={note} onDelete={deleteNote} key={note.id} />
-                ))}
-            </div>
-            <h2>Create a Note</h2>
+                <h2>Create a Note</h2>
             <form onSubmit={createNote}>
                 <label htmlFor="title">Title:</label>
                 <br />
@@ -78,6 +73,11 @@ function Home() {
                 <br />
                 <input type="submit" value="Submit"></input>
             </form>
+                <h2>Notes</h2>
+                {notes.map((note) => (
+                    <Note note={note} onDelete={deleteNote} key={note.id} />
+                ))}
+            </div>
         </div>
     );
 }
